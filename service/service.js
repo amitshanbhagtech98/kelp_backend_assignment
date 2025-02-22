@@ -64,10 +64,10 @@ const calculateAgeDistribution = async () => {
         const { under_20, between_20_40, between_40_60, above_60 } = result.rows[0];
 
         const percentages = {
-            "< 20": ((under_20 / totalUsers) * 100).toFixed(2),
-            "20 to 40": ((between_20_40 / totalUsers) * 100).toFixed(2),
-            "40 to 60": ((between_40_60 / totalUsers) * 100).toFixed(2),
-            "> 60": ((above_60 / totalUsers) * 100).toFixed(2),
+            "< 20": ((under_20 / totalUsers) * 100).toFixed(0),
+            "20 to 40": ((between_20_40 / totalUsers) * 100).toFixed(0),
+            "40 to 60": ((between_40_60 / totalUsers) * 100).toFixed(0),
+            "> 60": ((above_60 / totalUsers) * 100).toFixed(0),
         };
 
         console.log("\nAge-Group % Distribution");
